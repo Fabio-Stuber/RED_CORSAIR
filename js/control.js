@@ -49,7 +49,7 @@ function minus_health(item, menge) {
     }
 
     if (Health <= 0) {
-        localStorage['score_gameover'] = score;
+        localStorage.setItem("gameover_score", score);
         location.replace("/gameover.html");
     }
 
@@ -59,6 +59,7 @@ function plus_coin(item, menge) {
     if (anyCollision(spieler, item)) {
         score = score + menge
         punkteAnzeige.textContent = score + " Punkte"
+        localStorage.setItem("gameover_score", score);
         audio_coin.currentTime = 0;
         audio_coin.play();
         console.log(score)
@@ -69,7 +70,10 @@ function plus_coin(item, menge) {
         for (var collision of collisions) {
             collision.parentNode.removeChild(collision)
         }
+        if (score > localStorage.getItem("HighScore")){
+         localStorage.setItem("HighScore", score);
 
+        }
     }
 
 }

@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    border-style: solid;
+    border: 1px;
+    border-color: brown;
+}
+
+
+.titlearea {
+    background-image: image();
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    border: 0px;
+
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vh;
+
+
+}
+
+.punkte,
+.heal,
+.Anzeige {
+
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vh;
+
+}
+
+.playground {
+    background-image: url("/Images/Background/Background_Playground.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+    width: 100%;
+    height: 80%;
+    border: 0px;
+}
+
+.player {
+    background-image: url("/Images/pirate.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 12vh;
+    height: 17vh;
+    border: 0px;
+    margin-left: -12vh;
+    align-items: center;
+
+}
+
+.infoarea {
+    background-image: url("/Images/Background/ship_1.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+
+    top: 80vh;
+    width: 100vw;
+    height: 20vh;
+    border: 0px
+}
+
+
+.coin {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+    background: url("/Images/coin.png");
+
+    background-size: 10vh;
+
+    z-index: 1000;
+
+
+}
+
+.octo {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+    background: url("/Images/octopus_2.png");
+
+    background-size: 10vh;
+    z-index: 1000;
+
+
+}
+
+.rum {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+    background: url("/Images/rum.png");
+
+    background-size: 10vh;
+
+    z-index: 1000;
+
+
+}
+
+.bomb {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+    background: url("/Images/bomb.png");
+
+    background-size: 10vh;
+
+    z-index: 1000;
+
+
+}

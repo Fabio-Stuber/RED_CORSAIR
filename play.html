@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RED CORSAIR</title>
+    <!-- FAVICON-->
+    <link
+      rel="shortcut icon"
+      href="/Images/pirate_ship.png"
+      type="image/x-icon"
+    />
+
+    <!-- STYLE LINK -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCRIPTS -->
+    <script src="https://jsgame.bbz.cloud/scripts/v1/keyboard.js"></script>
+    <script src="https://jsgame.bbz.cloud/scripts/v1/timer.js"></script>
+    <script src="https://jsgame.bbz.cloud/scripts/v1/collision.js"></script>
+
+    <script src="/js/control.js" defer></script>
+  </head>
+  <body>
+    <div class="titlearea">
+      <p class="Anzeige">
+        <span class="punkte">0 punkte</span> / <span class="heal">5 Leben</span>
+      </p>
+    </div>
+    <div class="playground">
+      <div class="player"></div>
+    </div>
+
+    <div class="infoarea">
+      <audio class="bg_sound" volume="0.1" loop autoplay>
+        <source src="Sound/ost_background.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </body>
+</html>

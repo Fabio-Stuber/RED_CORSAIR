@@ -39,7 +39,7 @@ h1 {
 }
 
 .playground {
-    background-image: url("/Images/Background/Background_Playground.jpg");
+    background-image: url("../Images/Background/Background_Playground.jpg");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .player {
-    background-image: url("/Images/pirate.png");
+    background-image: url("../Images/pirate.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -71,7 +71,7 @@ h1 {
 }
 
 .infoarea {
-    background-image: url("/Images/Background/ship_1.png");
+    background-image: url("../Images/Background/ship_1.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -89,7 +89,7 @@ h1 {
     height: 10vh;
     width: 10vh;
     background-color: red;
-    background: url("/Images/coin.png");
+    background: url("../Images/coin.png");
 
     background-size: 10vh;
 
@@ -103,7 +103,7 @@ h1 {
     height: 10vh;
     width: 10vh;
     background-color: red;
-    background: url("/Images/octopus_2.png");
+    background: url("../Images/octopus_2.png");
 
     background-size: 10vh;
     z-index: 1000;
@@ -116,7 +116,7 @@ h1 {
     height: 10vh;
     width: 10vh;
     background-color: red;
-    background: url("/Images/rum.png");
+    background: url("../Images/rum.png");
 
     background-size: 10vh;
 
@@ -130,7 +130,7 @@ h1 {
     height: 10vh;
     width: 10vh;
     background-color: red;
-    background: url("/Images/bomb.png");
+    background: url("../Images/bomb.png");
 
     background-size: 10vh;
 

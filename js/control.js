@@ -1,17 +1,17 @@
-var spieler = document.querySelector('.player')
+let spieler = document.querySelector('.player')
 spieler.style.left = '50%'
-var spielfeld = document.querySelector('.playground')
-var punkteAnzeige = document.querySelector('.punkte')
-var HealthAnzeige = document.querySelector('.heal')
-var ScoreAnzeige = document.querySelector('.score')
-var bg_sound = document.querySelector('.bg_sound')
-var score = 0;
-var Health = 5;
-var Geschwindikeit = 5;
+let spielfeld = document.querySelector('.playground')
+let punkteAnzeige = document.querySelector('.punkte')
+let HealthAnzeige = document.querySelector('.heal')
+let ScoreAnzeige = document.querySelector('.score')
+let bg_sound = document.querySelector('.bg_sound')
+let score = 0;
+let Health = 5;
+let Geschwindikeit = 5;
 
-var audio_coin = new Audio('Sound/effects/coin_2.mp3');
-var audio_gameover = new Audio('Sound/effects/last_life.wav');
-var audio_Start = new Audio('Sound/effects/pirate-arr.mp3');
+let audio_coin = new Audio('Sound/effects/coin_2.mp3');
+let audio_gameover = new Audio('Sound/effects/last_life.wav');
+let audio_Start = new Audio('Sound/effects/pirate-arr.mp3');
 
 bg_sound.volume = 0.2;
 audio_coin.volume = 1.0;
@@ -19,10 +19,10 @@ audio_gameover.volume = 1.0;
 audio_gameover.volume = 1.0;
 audio_Start.play()
 
-var timer = new Timer(30)
+let timer = new Timer(30)
 
 function move_object(objects) {
-    for (var object of objects) {
+    for (let object of objects) {
         object.style.top = parseInt(object.style.top) + Geschwindikeit + 'px'
         if (parseInt(object.style.top) > 2000) {
             object.parentNode.removeChild(object)
@@ -40,9 +40,9 @@ function minus_health(item, menge) {
         audio_gameover.play();
 
         // Kommentar: sobald der Spieler mit item kollidiert, werden diese gelöscht
-        var collisions = allCollisions(spieler, item)
+        let collisions = allCollisions(spieler, item)
         // Kommentar: wir gehen durch alle Kollisionsobjekte durch und löschen sie
-        for (var collision of collisions) {
+        for (let collision of collisions) {
             collision.parentNode.removeChild(collision)
         }
 
@@ -50,7 +50,7 @@ function minus_health(item, menge) {
 
     if (Health <= 0) {
         localStorage.setItem("gameover_score", score);
-        location.replace("/gameover.html");
+        location.replace("gameover.html");
     }
 
 }
@@ -65,13 +65,13 @@ function plus_coin(item, menge) {
         console.log(score)
 
         // Kommentar: sobald der Spieler mit item kollidiert, werden diese gelöscht
-        var collisions = allCollisions(spieler, item)
+        let collisions = allCollisions(spieler, item)
         // Kommentar: wir gehen durch alle Kollisionsobjekte durch und löschen sie
-        for (var collision of collisions) {
+        for (let collision of collisions) {
             collision.parentNode.removeChild(collision)
         }
-        if (score > localStorage.getItem("HighScore")){
-         localStorage.setItem("HighScore", score);
+        if (score > localStorage.getItem("HighScore")) {
+            localStorage.setItem("HighScore", score);
 
         }
     }
@@ -93,7 +93,7 @@ function Key_Control() {
         spieler.style.left = parseInt(spieler.style.left) - 1 + '%'
     }
     if (keyboard(27)) { // Exit (Esc)
-        location.assign("/index.html")
+        location.assign("index.html")
     }
 
 }
@@ -101,9 +101,9 @@ function Key_Control() {
 function Create_Item() {
 
     if (timer.ready()) {
-        var h = document.createElement('div');
+        let h = document.createElement('div');
 
-        var aitem = Math.round(Math.random() * 4);
+        let aitem = Math.round(Math.random() * 4);
         if (aitem == 1) {
             h.classList.add('coin')
 
@@ -148,16 +148,16 @@ function loop() {
     Create_Item();
 
     // selektiert die Items
-    var item_coin = document.querySelectorAll('.coin')
+    let item_coin = document.querySelectorAll('.coin')
     move_object(item_coin);
 
-    var item_octo = document.querySelectorAll('.octo')
+    let item_octo = document.querySelectorAll('.octo')
     move_object(item_octo);
 
-    var item_rum = document.querySelectorAll('.rum')
+    let item_rum = document.querySelectorAll('.rum')
     move_object(item_rum);
 
-    var item_bomb = document.querySelectorAll('.bomb')
+    let item_bomb = document.querySelectorAll('.bomb')
     move_object(item_bomb);
 
     minus_health(item_bomb, 2);
